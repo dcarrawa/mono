@@ -1,9 +1,10 @@
 1. Follow the initial build instructions described here -- https://www.mono-project.com/docs/compiling-mono/windows/
 2. Copy your installed version of Mono somewhere else so it doesn't get destroyed (i.e. D:/GitHub/godotfork/patched_mono_for_godot_windows_x64/)
 3. Use the copy as your prefix.
-	- export PREFIX=D:/GitHub/godotfork/patched_mono_for_godot_windows_x64/
+	- export PREFIX=C:/Users/devin/Documents/GitHub/MonoForGodot/
     - export PATH=$PREFIX/bin:$PATH
-4. Run the following commands from cygwin
+4. Make sure mono from program files is in your path (you should be able to type mono in cygwin and see output), you may also need the Windows 8.1 SDK
+5. Run the following commands from cygwin (as administrator!)
 	- ./autogen.sh --prefix=$PREFIX --host=x86_64-w64-mingw32 --enable-msvc --disable-boehm
 	- make -j4
     - make install
